@@ -49,7 +49,7 @@ class PdfSafeExtension extends \Twig_Extension
      */
     public function pdfsafe($string)
     {
-        $safeTags = strip_tags($string, '<div><a><table><tr><td><th><p><strong><em><ul><ol><li><blockquote><br><h1><h2><h3><h4><h5><h6><img>');
+        $safeTags = strip_tags($string, '<div><a><table><tr><td><th><p><strong><em><ul><ol><li><blockquote><br><h1><h2><h3><h4><h5><h6><img><hr>');
         $safeTags = preg_replace('#alt="[^"]*"#', '', $safeTags);
         $safeTags = preg_replace('#start="[^"]*"#', '', $safeTags);
         $safeTags = preg_replace('#style="[^"]*"#', '', $safeTags);
