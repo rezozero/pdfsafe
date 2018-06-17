@@ -55,6 +55,10 @@ class PdfSafeExtension extends \Twig_Extension
         $safeTags = preg_replace('#style="[^"]*"#', '', $safeTags);
         $safeTags = preg_replace('#title="[^"]*"#', '', $safeTags);
         $safeTags = preg_replace('#rev="[^"]*"#', '', $safeTags);
+        // disable target attr
+        $safeTags = preg_replace('#target="[^"]*"#', '', $safeTags);
+        // disable rel attr
+        $safeTags = preg_replace('#rel="[^"]*"#', '', $safeTags);
         // disable anchor links
         $safeTags = preg_replace('#href="\#[^"]*"#', '', $safeTags);
         // disable internal links

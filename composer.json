@@ -2,7 +2,7 @@
     "name": "rezozero/pdfsafe",
     "description":"Twig extension to clean-up an HTML content for PDF generation (psliwa/php-pdf)",
     "license":"MIT",
-    "type": "project",
+    "type": "library",
     "autoload": {
         "psr-4": {
             "RZ\\PdfSafe\\": "src/"
