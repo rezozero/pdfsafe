@@ -73,6 +73,6 @@ class PdfSafeExtension extends \Twig_Extension
         $safeTags = preg_replace('#<\/th>#', '</td>', $safeTags);
         $safeTags = preg_replace('#\<p\>\<br\>#', '<p>', $safeTags);
 
-        return $safeTags;
+        return html_entity_decode(trim($safeTags));
     }
 }
