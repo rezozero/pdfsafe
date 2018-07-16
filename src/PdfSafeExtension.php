@@ -5,11 +5,14 @@
  */
 namespace RZ\PdfSafe;
 
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
+
 /**
  * Class PdfSafeExtension
  * @package RZ\PdfSafe
  */
-class PdfSafeExtension extends \Twig_Extension
+class PdfSafeExtension extends AbstractExtension
 {
     /**
      * @var string
@@ -26,20 +29,12 @@ class PdfSafeExtension extends \Twig_Extension
     }
 
     /**
-     * @return string
-     */
-    public function getName()
-    {
-        return 'pdf_safe';
-    }
-
-    /**
      * @return array
      */
     public function getFilters()
     {
         return [
-            new \Twig_SimpleFilter('pdfsafe', [$this, 'pdfsafe'], ['is_safe' => ['html']]),
+            new TwigFilter('pdfsafe', [$this, 'pdfsafe'], ['is_safe' => ['html']]),
         ];
     }
 
