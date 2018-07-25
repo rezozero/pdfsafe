@@ -62,6 +62,7 @@ class PdfSafeExtension extends AbstractExtension
         $safeTags = preg_replace('#src="(\/[^"]*)"#', 'src="'.$this->schemeAndHost.'$1"', $safeTags);
         $safeTags = preg_replace('#<hr\/>#', '', $safeTags);
         $safeTags = preg_replace('#\&\#8617\;#', '', $safeTags);
+        $safeTags = preg_replace('#\&#', '&amp;', $safeTags);
 
         $safeTags = preg_replace('#<td\s*>#', '<td>', $safeTags);
         $safeTags = preg_replace('#<th\s*>#', '<td>', $safeTags);
