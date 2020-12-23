@@ -9,7 +9,6 @@ use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
 
 /**
- * Class PdfSafeExtension
  * @package RZ\PdfSafe
  */
 class PdfSafeExtension extends AbstractExtension
@@ -20,7 +19,6 @@ class PdfSafeExtension extends AbstractExtension
     private $schemeAndHost;
 
     /**
-     * PdfSafeExtension constructor.
      * @param string $schemeAndHost
      */
     public function __construct($schemeAndHost)
@@ -39,7 +37,7 @@ class PdfSafeExtension extends AbstractExtension
     }
 
     /**
-     * @param $string
+     * @param string $string
      * @return mixed|string
      */
     public function pdfsafe($string)
